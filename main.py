@@ -6,12 +6,7 @@ famousWords = data["famous"]  # a 代表前面垫话，b代表后面垫话
 before = data["before"]  # 在名人名言前面弄点废话
 after = data['after']  # 在名人名言后面弄点废话
 trash = data['bosh']  # 代表文章主要废话来源
-
-xx = "学生会退会"
-
 repeatability = 2
-
-
 def shuffle(n):
     global repeatability
     pool = list(n) * repeatability
@@ -20,10 +15,8 @@ def shuffle(n):
         for elements in pool:
             yield elements
 
-
 nextTrash = shuffle(trash)
 nextFamous = shuffle(famousWords)
-
 
 def getSomeFamous():
     global nextFamous
